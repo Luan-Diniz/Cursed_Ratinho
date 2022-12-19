@@ -1,0 +1,7 @@
+UI: PyGame
+Project Pattern: MVC?
+Config: Time de execução, volume. (Another options: strong limits, weak limits (passa args mudando os pesos da prob?)).
+
+
+UI: Feedback para o usuário de args, "baloes" de informacao, botões  de start, close.
+Lógica: random import choices   ////  choices(population,weights) //// sons  e imagens aleatórias. 
