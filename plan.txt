@@ -4,4 +4,5 @@ Config: Time de execução, volume. (Another options: strong limits, weak limits
 
 
 UI: Feedback para o usuário de args, "baloes" de informacao, botões  de start, close.
-Lógica: random import choices   ////  choices(population,weights) //// sons  e imagens aleatórias. 
+Lógica: random import choices   ////  choices(population,weights) //// sons  e imagens aleatórias.
+        Obs: Mudar o peso da probabilidade após executar um som?
