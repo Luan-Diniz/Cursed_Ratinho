@@ -1,8 +1,8 @@
 import pygame
 import sys
 
-LENGTH = 640
-WIDTH = 480
+LENGTH = 887.9
+WIDTH = 499.2
 
 #Inicialization
 pygame.init()
