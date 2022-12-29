@@ -1,30 +1,19 @@
 import pygame
 import sys
-import re
 from screeninfo import get_monitors
 
-resolucao = ''
-
-for m in get_monitors():
-    resolucao = str(m)
-    
-resolucao_altura = re.findall('width=.+?,', resolucao)
-resolucao_altura = resolucao_altura[0]
-resolucao_altura = str(resolucao_altura)
-resolucao_altura = resolucao_altura.replace('width=', '')
-resolucao_altura = resolucao_altura.replace(',', '')
-resolucao_altura = float(resolucao_altura)*0.65
-
-resolucao_largura = re.findall('height=.+?,', resolucao)
-resolucao_largura = resolucao_largura[0]
-resolucao_largura = str(resolucao_largura)
-resolucao_largura = resolucao_largura.replace('height=', '')
-resolucao_largura = resolucao_largura.replace(',', '')
-resolucao_largura = float(resolucao_largura)*0.65
+#Get screen size
+screen_height, screen_width = 0, 0
+for monitor in get_monitors():
+    if  monitor.is_primary:
+        screen_height = monitor.height
+        screen_width = monitor.width
+if screen_height == 0 or screen_width == 0:
+    raise Exception("No primary monitor set: Unable to get the size.")
 
 #Inicialization
 pygame.init()
-display = pygame.display.set_mode((resolucao_altura,resolucao_largura))
+display = pygame.display.set_mode((screen_width * 0.65, screen_height * 0.65))
 pygame.display.set_caption("Cursed Ratinho")
 
 #Main loop
